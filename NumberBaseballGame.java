@@ -57,6 +57,10 @@ public class NumberBaseballGame {
 
     private static int readValidInput(Scanner scanner) throws NumberFormatException {
         String input = scanner.next();
+
+        if (input.contains("-1")) {
+            System.exit(0);
+        }
         if (input.length() != 1 || !Character.isDigit(input.charAt(0))) {
             throw new NumberFormatException();
         }
